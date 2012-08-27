@@ -9,6 +9,6 @@ library(Rcmdr)
 
 install.packages("EcoVirtual_1.0.tar.gz" ,repos=NULL)  
 
-install.packages("rcmdrplugin.ecovirtual_1.0.tar.gz" ,repos=NULL) # VAIO new
+install.packages("RcmdrPlugin.EcoVirtual_1.0.tar.gz" ,repos=NULL) # VAIO new
 
 #testemelina
