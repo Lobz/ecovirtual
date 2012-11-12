@@ -5,10 +5,10 @@ install.packages("Rcmdr")
 ## para iniciar o Rcmdr:
 library(Rcmdr)
 
-#pacotes do ecovirtual baixado no site da disciplina
+#pacotes do ecovirtual
 
 install.packages("EcoVirtual_1.0.tar.gz" ,repos=NULL)  
 
 install.packages("RcmdrPlugin.EcoVirtual_1.0.tar.gz" ,repos=NULL) # VAIO new
 
-#testemelina
+
