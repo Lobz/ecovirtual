@@ -1,0 +1,23 @@
+* installing *source* package ‘RcmdrPlugin.EcoVirtual’ ...
+** Creating default NAMESPACE file
+** R
+** inst
+** preparing package for lazy loading
+Aviso: replacing previous import ‘tclvalue’ when loading ‘tcltk’
+Aviso: replacing previous import ‘ttkentry’ when loading ‘tcltk’
+Aviso: replacing previous import ‘ttkframe’ when loading ‘tcltk’
+Aviso: replacing previous import ‘ttkradiobutton’ when loading ‘tcltk’
+Aviso: replacing previous import ‘ttkscrollbar’ when loading ‘tcltk’
+** help
+*** installing help indices
+** building package indices ...
+** testing if installed package can be loaded
+running .First.lib() for package ‘RcmdrPlugin.EcoVirtual’ as .onLoad/.onAttach were not found
+Mensagens de aviso perdidas:
+1: replacing previous import ‘tclvalue’ when loading ‘tcltk’ 
+2: replacing previous import ‘ttkentry’ when loading ‘tcltk’ 
+3: replacing previous import ‘ttkframe’ when loading ‘tcltk’ 
+4: replacing previous import ‘ttkradiobutton’ when loading ‘tcltk’ 
+5: replacing previous import ‘ttkscrollbar’ when loading ‘tcltk’ 
+
+* DONE (RcmdrPlugin.EcoVirtual)

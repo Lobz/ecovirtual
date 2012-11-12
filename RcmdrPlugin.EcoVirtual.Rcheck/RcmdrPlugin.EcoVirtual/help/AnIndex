@@ -1,0 +1,16 @@
+RcmdrPlugin.EcoVirtual-package	RcmdrPlugin.EcoVirtual.package
+comcompDbox	RcmdrPlugin.EcoVirtual-internal
+compDb	RcmdrPlugin.EcoVirtual-internal
+estdemDb	RcmdrPlugin.EcoVirtual-internal
+intCol	RcmdrPlugin.EcoVirtual-internal
+metacompDb	RcmdrPlugin.EcoVirtual-internal
+popExp	RcmdrPlugin.EcoVirtual-internal
+popLog	RcmdrPlugin.EcoVirtual-internal
+popstrDb	RcmdrPlugin.EcoVirtual-internal
+propRain	RcmdrPlugin.EcoVirtual-internal
+RcmdrPlugin.EcoVirtual	RcmdrPlugin.EcoVirtual.package
+regnichoDbox	RcmdrPlugin.EcoVirtual-internal
+resEff	RcmdrPlugin.EcoVirtual-internal
+resEffcol	RcmdrPlugin.EcoVirtual-internal
+spDep	RcmdrPlugin.EcoVirtual-internal
+sucmatrixDbox	RcmdrPlugin.EcoVirtual-internal
