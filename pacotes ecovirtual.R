@@ -7,8 +7,8 @@ library(Rcmdr)
 
 #pacotes do ecovirtual
 
-install.packages("EcoVirtual_1.0.tar.gz" ,repos=NULL)  
+install.packages("EcoVirtual_0.01.tar.gz" ,repos=NULL)  
 
-install.packages("RcmdrPlugin.EcoVirtual_1.0.tar.gz" ,repos=NULL) # VAIO new
+install.packages("RcmdrPlugin.EcoVirtual_0.01.tar.gz" ,repos=NULL) # VAIO new
 
 
