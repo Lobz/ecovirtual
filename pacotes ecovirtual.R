@@ -7,8 +7,8 @@ library(Rcmdr)
 
 #pacotes do ecovirtual
 
-install.packages("/home/melina/SVN_PI/ecovirtual/EcoVirtual_0.01.tar.gz" ,repos=NULL)  
+install.packages("/home/melina/SVN/ecovirtual/EcoVirtual_0.01.tar.gz" ,repos=NULL)  
 
-install.packages("/home/melina/SVN_PI/ecovirtual/RcmdrPlugin.EcoVirtual_0.01.tar.gz" ,repos=NULL) # VAIO new
+install.packages("/home/melina/SVN/ecovirtual/RcmdrPlugin.EcoVirtual_0.01.tar.gz" ,repos=NULL) # VAIO new
 
 
