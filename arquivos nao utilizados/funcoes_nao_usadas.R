@@ -500,3 +500,110 @@ sim<-function(dados, indice="bc")
 }
 
 
+
+######################################
+### plugin do RMCDR para meta.spac ###
+######################################
+
+# spatial dependence 
+spDep <-function () 
+{
+require(EcoVirtual)
+initializeDialog(title = gettextRcmdr("Spatial Colonization"))
+####
+dsname <- tclVar("Do_Not_Save")
+entryDsname <- tkentry(top, width="20", textvariable=dsname)
+###
+tfVar <- tclVar("100")
+tfEntry <- tkentry(top, width = "4", textvariable = tfVar)
+clVar <- tclVar("20")
+lnVar <- tclVar("20")
+clEntry <- tkentry(top, width = "4", textvariable = clVar)
+lnEntry <- tkentry(top, width = "4", textvariable = lnVar)
+fiVar <- tclVar(0.25) ## nclassVar ->fiVar
+fiEntry <- tkscale(top, from=0, to=1, showvalue=TRUE, variable=fiVar, resolution=0.01, orient="horizontal")
+pcVar <- tclVar("0.1") ## nclassVar ->fiVar
+pcEntry <- tkscale(top, from=0, to=1, showvalue=TRUE, variable=pcVar, resolution=0.01, orient="horizontal")
+peVar <- tclVar("0.05") ## nclassVar ->fiVar
+peEntry <- tkscale(top, from=0, to=1, showvalue=TRUE, variable=peVar, resolution=0.01, orient="horizontal")
+cantoVar <- tclVar("1")
+cantoBox <- tkcheckbutton(top, variable = cantoVar)
+	onOK <- function() 
+	{
+        closeDialog()
+        tf <- round(as.numeric(tclvalue(tfVar)))
+        if (is.na(tf) || tf <= 0) 
+        {
+            errorCondition(message = "Number of simulations must be a positive integer")
+            return()
+        }
+        cl <- round(as.numeric(tclvalue(clVar)))
+        if (is.na(cl) || cl <= 0) 
+        {
+            errorCondition(message = "Number of columns on the simulated arena must be a positive integer.")
+            return()
+        }
+        ln <- round(as.numeric(tclvalue(lnVar)))
+        if (is.na(ln) || ln <= 0) 
+        {
+            errorCondition("Number of lines on the simulated arena must be a positive integer.")
+            return()
+        }
+        fi <- as.numeric(tclvalue(fiVar))
+#        if (fi<=0 || fi > 1) 
+#        {
+#            errorCondition(message = "Proportion of patchs occuped must be between 0 and 1 ")
+#            return()
+#        }
+       pc <- as.numeric(tclvalue(pcVar))
+#        if (pc<0 || pc > 10) 
+#        {
+#            errorCondition(message = "Colonization constant must be between 0 and 10")
+#            return()
+#        }
+       pe <- as.numeric(tclvalue(peVar))
+#        if (pe<0 || pe > 1) 
+#        {
+#            errorCondition(message = "Probability of extintion must be between 0 and 1")
+#            return()
+#        }
+cantoVF <- as.logical(as.numeric(tclvalue(cantoVar)))
+############ Data name
+   dsnameValue <- trim.blanks(tclvalue(dsname))
+        if (dsnameValue == "Do_Not_Save" | dsnameValue=="") 
+        {
+        	command <- paste("meta.spac(tf = ",tf, ", cl = ", cl,", fi = ", fi,", ln =", ln,", pc = ", pc,", pe = ", pe, ", canto = ", cantoVF,")", sep = "")
+        }
+        else  
+		  {
+		  command <- paste(dsnameValue,"<-meta.spac(tf = ",tf, ", cl = ", cl,", fi = ", fi,", ln =", ln,", pc = ", pc,", pe = ", pe, ", canto = ", cantoVF,")", sep = "")
+		  }
+######## 
+	doItAndPrint(command)
+	tkfocus(CommanderWindow())
+	}
+OKCancelHelp(helpSubject = "metaPop")
+tkgrid(tklabel(top, text="Enter name for data set:"), entryDsname, sticky="e")
+tkgrid(tklabel(top, text="Simulation Arena Conditions :", fg="blue"), sticky="w")
+tkgrid(tklabel(top, text = "Maximum time  "), tfEntry, sticky = "e")
+tkgrid(tklabel(top, text = "Columns  "), clEntry, sticky = "e")
+tkgrid(tklabel(top, text = "Rows  "), lnEntry, sticky = "e")
+tkgrid(tklabel(top, text="Initial Simulation Conditions :", fg="blue"), sticky="w")
+tkgrid(tklabel(top, text = "Initial occupance"), fiEntry, sticky = "se")
+tkgrid(tklabel(top, text = "Colonization probability"), pcEntry, sticky = "se")
+tkgrid(tklabel(top, text = "Extintion probability"), peEntry, sticky = "se")
+tkgrid(tklabel(top, text = "Corner start"), cantoBox, sticky = "e")
+tkgrid(buttonsFrame, sticky = "w", columnspan = 2)
+tkgrid.configure(entryDsname, sticky = "w")
+tkgrid.configure(tfEntry, sticky = "w")
+tkgrid.configure(clEntry, sticky = "w")
+tkgrid.configure(lnEntry, sticky = "w")
+tkgrid.configure(fiEntry, sticky = "w")
+tkgrid.configure(pcEntry, sticky = "w")
+tkgrid.configure(peEntry, sticky = "w")
+tkgrid.configure(cantoBox, sticky = "w")
+dialogSuffix(rows = 9, columns = 2, focus = entryDsname)
+}
+
+
+

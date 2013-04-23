@@ -7,7 +7,6 @@ Simulating Ecological Models
 }
 \description{
 Simulating Ecological Models from populations, metapopulations, communities and biogeographical, classical models are presented as a learning proposal.
-\details{
 \tabular{ll}{
 Package: \tab EcoVirtual\cr
 Type: \tab Package\cr
@@ -15,9 +14,7 @@ Version: \tab 1.0\cr
 Date: \tab 2011-02-08\cr
 License: \tab What license is it under?\cr
 LazyLoad: \tab yes\cr
-}
-metapop function
-}
+
 \author{
 Alexandre Adalardo de Oliveira<aleadalardo@gmail.com>
 }
