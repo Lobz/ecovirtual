@@ -1,14 +1,10 @@
-#ecovirtual melina
-
+#ecovirtual - montando pacotes pelo terminal
+R CMD build /home/ale/Documentos/Ale2013/AleProjetos/EcoVirtual_svn/EcoVirtual
+R CMD build /home/ale/Documentos/Ale2013/AleProjetos/EcoVirtual_svn/RcmdrPlugin.EcoVirtual
 #instalando o rcmdr
 install.packages("Rcmdr")
+#pacotes do ecovirtual
+install.packages("EcoVirtual_0.02.tar.gz" ,repos=NULL)  
+install.packages("RcmdrPlugin.EcoVirtual_0.02.tar.gz" ,repos=NULL) # VAIO new
 ## para iniciar o Rcmdr:
 library(Rcmdr)
-
-#pacotes do ecovirtual
-
-install.packages("/home/melina/SVN/ecovirtual/EcoVirtual_0.01.tar.gz" ,repos=NULL)  
-
-install.packages("/home/melina/SVN/ecovirtual/RcmdrPlugin.EcoVirtual_0.01.tar.gz" ,repos=NULL) # VAIO new
-
-
