@@ -4,8 +4,8 @@ R CMD build /home/ale/Documentos/Ale2013/AleProjetos/EcoVirtual_svn/RcmdrPlugin.
 #instalando o rcmdr
 install.packages("Rcmdr")
 #pacotes do ecovirtual
-install.packages("/home/ale/Documentos/Ale2013/AleProjetos/EcoVirtual_svn/EcoVirtual_0.04.3.tar.gz" ,repos=NULL)  
-install.packages("RcmdrPlugin.EcoVirtual_0.03.2.tar.gz" ,repos=NULL) # VAIO new
+install.packages("/home/ale/Documentos/Ale2013/AleProjetos/EcoVirtual/EcoVirtual_0.05.tar.gz" ,repos=NULL)  
+install.packages("/home/ale/Documentos/Ale2013/AleProjetos/EcoVirtual/RcmdrPlugin.EcoVirtual_0.05.tar.gz" ,repos=NULL) # VAIO new
 ## para iniciar o Rcmdr:
 library(Rcmdr)
 
